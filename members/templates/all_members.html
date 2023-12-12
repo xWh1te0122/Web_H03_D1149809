@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Members</h1>
+  
+<ul>
+  <h2>Teenager Group</h2>
+  {% for x in mymembers %}
+    {% if x.age < 20 %}
+      <li><a href="details/{{ x.id }}">{{ x.firstname }} {{ x.lastname }} {{x.age}}</a></li>
+    {%endif%}
+  {% endfor %}
+  <h2>Adult Group</h2>
+  {% for x in mymembers %}
+    {% if x.age >= 20 %}
+      <li><a href="details/{{ x.id }}">{{ x.firstname }} {{ x.lastname }} {{x.age}}</a></li>
+    {%endif%}
+  {% endfor %}
+</ul>
+
+</body>
+</html>

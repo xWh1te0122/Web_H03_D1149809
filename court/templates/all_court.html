@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Courts</h1>
+  
+<ul>
+  <h2>Court Group</h2>
+  {% for x in mycourt %}
+  <li><a href="detail/{{ x.id }}">{{ x.courtName }}</a></li>
+  {% endfor %}
+</ul>
+ 
+</body>
+</html>
